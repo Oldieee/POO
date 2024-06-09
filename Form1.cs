@@ -67,23 +67,24 @@ namespace Unilog
             }
             else
             {
-                if(connect.State!= ConnectionState.Open)
+                if (connect.State != ConnectionState.Open)
                 {
-                    try { 
+                    try
+                    {
                         connect.Open();
 
                         String selectData = "SELECT * FROM admin WHERE username= @username AND pwd=@pwd";
-                        using(SqlCommand cmd=new SqlCommand(selectData,connect))
+                        using (SqlCommand cmd = new SqlCommand(selectData, connect))
                         {
                             cmd.Parameters.AddWithValue("username", login_username.Text);
-                            cmd.Parameters.AddWithValue ("pwd", login_pwd.Text);
+                            cmd.Parameters.AddWithValue("pwd", login_pwd.Text);
                             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                             DataTable table = new DataTable();
                             adapter.Fill(table);
-                            if(table.Rows.Count >= 1)
+                            if (table.Rows.Count >= 1)
                             {
                                 MessageBox.Show("Logged In successfully", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                MainForm mForm= new MainForm();
+                                MainForm mForm = new MainForm();
                                 mForm.Show();
                                 this.Hide();
                             }
@@ -93,12 +94,18 @@ namespace Unilog
                             }
                         }
                     }
-                    catch(Exception ex) {
-                        MessageBox.Show("Error Connecting:"+ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error Connecting:" + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     finally { connect.Close(); }
                 }
             }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
