@@ -168,7 +168,7 @@ namespace Unilog
             panel2.Location = new Point(0, 0);
             panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(920, 53);
+            panel2.Size = new Size(853, 53);
             panel2.TabIndex = 20;
             // 
             // reg_pwd
@@ -197,7 +197,7 @@ namespace Unilog
             dataView_students.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataView_students.Location = new Point(0, 51);
             dataView_students.Name = "dataView_students";
-            dataView_students.Size = new Size(844, 202);
+            dataView_students.Size = new Size(850, 202);
             dataView_students.TabIndex = 23;
             dataView_students.CellContentClick += dataGridView1_CellContentClick;
             // 
