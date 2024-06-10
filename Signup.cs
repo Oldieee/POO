@@ -33,7 +33,7 @@ namespace Unilog
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(signup_showPwd.Checked)
+            if (signup_showPwd.Checked)
             {
                 signup_pwd.PasswordChar = '\0';
             }
@@ -70,7 +70,7 @@ namespace Unilog
 
         private void signup_btn_Click(object sender, EventArgs e)
         {
-            if (signup_email.Text==""||signup_username.Text==""||signup_pwd.Text=="")
+            if (signup_email.Text == "" || signup_username.Text == "" || signup_pwd.Text == "")
             {
                 MessageBox.Show("Please fill all blank fields", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -124,10 +124,15 @@ namespace Unilog
                     {
                         connect.Close();
                     }
-            
-            
+
+
                 }
             }
+        }
+
+        private void signup_pwd_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
