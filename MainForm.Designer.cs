@@ -397,6 +397,7 @@
             studeni_reg.Size = new Size(94, 20);
             studeni_reg.TabIndex = 7;
             studeni_reg.Text = "Înregistrare";
+            studeni_reg.Click += studeni_reg_Click;
             // 
             // studeni_note
             // 

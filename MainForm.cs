@@ -77,5 +77,12 @@ namespace Unilog
         {
 
         }
+
+        private void studeni_reg_Click(object sender, EventArgs e)
+        {
+            InregistrareStudentics mReg=new InregistrareStudentics();
+            mReg.Show();
+           this.Hide();
+        }
     }
 }
