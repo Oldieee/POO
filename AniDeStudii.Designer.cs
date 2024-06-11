@@ -1,5 +1,5 @@
 
-namespace Programe
+namespace Unilog
 {
     partial class ANiDeStudii
     {
